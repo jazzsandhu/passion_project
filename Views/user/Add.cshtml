@@ -1,0 +1,59 @@
+﻿@model List<passion_project.Models.user>
+@{
+    ViewBag.Title = "Add";
+}
+    <div style="float:left; border:2px solid black;width:25%;height:50em;margin:1em;padding:2em;background-color:black">
+        <ul>
+            <li>
+                <a href="https://localhost:44344/post/List" style="color:yellow;">Knowledge Jar</a>
+                <ul>
+                    <li><a href="https://localhost:44344/post/Add" style="color:yellow">Add More</a></li>
+                </ul>
+            </li>
+            <li>
+                <a style="color:yellow;" href="https://localhost:44344/user/List">Users</a>
+                <ul>
+                    <li><a href="https://localhost:44344/user/Add" style="color:yellow">Sign Up</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://localhost:44344/tag/List" style="color:yellow">Tags</a>
+                <ul>
+                    <li><a href="https://localhost:44344/tag/Add" style="color:yellow">Create Tags</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div style="float:right; border:2px solid black;width:70%;height:50em;margin:1em;padding:2em;background-color:lightgrey">
+        <h2 style="color:darkgreen;text-align:center">Sign up:</h2>
+        <form method="POST" action="/user/Add">
+            <div>
+                <label>First Name:</label>
+                <input class="form-control" type="text" name="first_name" />
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" class="form-control"name="last_name" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" class="form-control"name="e_mail" />
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input type="text" class="form-control" name="phone_number" />
+            </div>
+            <div>
+                <label>Home Address:</label>
+                <input type="text" class="form-control" name="home_address" />
+            </div>
+            <div>
+                <label>User Name:</label>
+                <input type="text" class="form-control"name="user_name" />
+            </div>
+            <div class="btn-warning" style="margin:1em;text-align:center;">
+                <input type="submit" name="submit" class="btn-warning" style="font-size:20px;color:green" value="Sign Up!" />
+            </div>
+        </form>
+    </div>
+
